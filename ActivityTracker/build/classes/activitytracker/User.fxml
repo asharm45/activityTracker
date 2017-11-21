@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="432.0" styleClass="root" stylesheets="@StyleNew.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="activitytrackerBL.UserController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <JFXHamburger fx:id="Hamburger" layoutX="388.0" layoutY="14.0" styleClass="jfx-hamburger-icon" />
+            <JFXDrawer fx:id="drawer" prefHeight="300.0" prefWidth="160.0" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

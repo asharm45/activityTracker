@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootStack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="440.0" prefWidth="400.0" stylesheets="@StyleNew.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="activitytrackerBL.TasksController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="root" stylesheets="@StyleNew.css">
+         <children>
+            <JFXTextField fx:id="T_UserId" focusColor="#04407c" labelFloat="true" layoutX="63.0" layoutY="26.0" prefHeight="25.0" prefWidth="258.0" promptText="User ID" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="User ID" />
+               </tooltip>
+            </JFXTextField>
+            <JFXDatePicker fx:id="T_FromSelectData" defaultColor="#ffff8d" layoutX="63.0" layoutY="93.0" prefHeight="25.0" prefWidth="258.0" promptText="From Date">
+               <tooltip>
+                  <Tooltip text="Select Date" />
+               </tooltip>
+            </JFXDatePicker>
+            <Label fx:id="closeBtn" alignment="CENTER" layoutX="367.0" onMouseClicked="#closeWin" onMouseExited="#changeColorBack" onMouseMoved="#changeColor" prefHeight="30.0" prefWidth="33.0" text="X" textFill="#a49e9e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Close" />
+               </tooltip>
+            </Label>
+            <JFXDatePicker fx:id="T_ToSelectData" defaultColor="#ffff8d" layoutX="62.0" layoutY="161.0" prefHeight="25.0" prefWidth="258.0" promptText="To Date">
+               <tooltip>
+                  <Tooltip text="Select Date" />
+               </tooltip>
+            </JFXDatePicker>
+            <JFXTextField fx:id="T_Task" focusColor="#04407c" labelFloat="true" layoutX="61.0" layoutY="232.0" prefHeight="25.0" prefWidth="258.0" promptText="Task" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="User ID" />
+               </tooltip>
+            </JFXTextField>
+            <JFXTextField fx:id="T_TaskDescription" focusColor="#04407c" labelFloat="true" layoutX="61.0" layoutY="304.0" prefHeight="25.0" prefWidth="258.0" promptText="Task" unFocusColor="BLACK">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="User ID" />
+               </tooltip>
+            </JFXTextField>
+            <JFXButton fx:id="saveBtn" layoutX="133.0" layoutY="373.0" onMouseClicked="#SaveTaskAction" prefHeight="40.0" prefWidth="99.0" text="Save" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>

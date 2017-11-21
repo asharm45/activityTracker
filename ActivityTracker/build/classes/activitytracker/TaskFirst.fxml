@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootStack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="900.0" stylesheets="@StyleNew.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="activitytrackerBL.TaskFirstController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0" styleClass="root">
+         <children>
+            <TableView fx:id="ActivityTrackerTable" layoutX="25.0" layoutY="67.0" prefHeight="355.0" prefWidth="852.0">
+              <columns>
+                <TableColumn fx:id="LoginIdCol" text="Login Id" />
+                <TableColumn fx:id="fromDateCol" prefWidth="104.0" text="From Date" />
+                  <TableColumn fx:id="toDateCol" prefWidth="194.0" text="To Date" />
+                  <TableColumn fx:id="TaskCol" prefWidth="297.0" text="Task" />
+                  <TableColumn fx:id="TaskDescriptionCol" prefWidth="176.0" text="Task Description" />
+              </columns>
+               <tooltip>
+                  <Tooltip text="Activity Tracker Table" />
+               </tooltip>
+            </TableView>
+            <Label fx:id="closeBtn" alignment="CENTER" layoutX="868.0" onMouseClicked="#CloseWin" onMouseExited="#colorChangeNormal" onMouseMoved="#closeColorChnage" prefHeight="32.0" prefWidth="32.0" text="X" textFill="#a49e9e">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Close" />
+               </tooltip>
+            </Label>
+            <JFXButton fx:id="addNewTaskBtn" buttonType="RAISED" layoutX="25.0" layoutY="14.0" onMouseClicked="#newTaskAction" prefHeight="25.0" prefWidth="141.0" text="Add New Task" textFill="WHITE" />
+            <JFXButton fx:id="deleteBtn" buttonType="RAISED" layoutX="223.0" layoutY="15.0" onMouseClicked="#deleteAction" prefHeight="40.0" prefWidth="86.0" text="Delete" textFill="WHITE" />
+            <Label fx:id="backToHome" layoutX="25.0" layoutY="456.0" onMouseClicked="#backToHomeAction" text="Back to Homepage" textFill="#003cff">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="refreshBtn" buttonType="RAISED" layoutX="345.0" layoutY="15.0" onMouseClicked="#refreshAction" prefHeight="40.0" prefWidth="86.0" text="Refresh" textFill="WHITE" />
+            <JFXTextField fx:id="userId" focusColor="#04407c" labelFloat="true" layoutX="223.0" layoutY="439.0" promptText="Login Id" style="-fx-background-color: Cream;" />
+            <JFXTextField fx:id="task" focusColor="#04407c" labelFloat="true" layoutX="435.0" layoutY="439.0" promptText="Task" />
+            <JFXTextField fx:id="taskDescription" focusColor="#04407c" labelFloat="true" layoutX="643.0" layoutY="439.0" promptText="Task Description" />
+         </children>
+      </Pane>
+   </children>
+</StackPane>
